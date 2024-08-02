@@ -42,7 +42,7 @@ device = torch.device("cuda:0" if use_cuda else "cpu")
 # for (k, v) in config.items():
 #     print("%s= %s" % (k, v))
 
-# zyl
+# anonymous
 
 # ! 因为模型的build过程参数的维度大小是由config决定的
 # ! 直接在model初始化过程里面传入 edge_featue_dim 可能会有问题

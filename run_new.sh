@@ -24,7 +24,7 @@ HL=$8
 
 
 eval "$(conda shell.bash hook)"
-conda activate zyl_new
+conda activate anonymous_new
 
 if [ "$HL" = "True" ]; then
     

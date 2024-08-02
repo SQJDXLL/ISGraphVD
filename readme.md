@@ -32,7 +32,7 @@ run the following command under ~/gmnDetect.
 The trained model will be saved to ～/data/project/cve/model
 ```
     python dividedataset.py --project curl --cve_id CVE-2021-22901
-    conda activate zyl_new
+    conda activate anonymous_new
     cd gmn
     python train_disjoint.py --project curl --cve_id CVE-2021-22901 --gpu 0 --batch_size 32 --learning_rate 1e-4 --num_epoch 10
 ```

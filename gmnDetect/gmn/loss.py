@@ -48,8 +48,8 @@ def pairwise_loss(x, y, labels, loss_type='margin', margin=1.0):
       # x_relu = torch.relu(x.clone())
       # return x_relu
 
-        # ! zion: 较新的torch版本这里会导致两次bp的报错，出现原因不明
-        # * zion: 实际上这里也没有必要使用 relu
+        # ! anonymous: 较新的torch版本这里会导致两次bp的报错，出现原因不明
+        # * anonymous: 实际上这里也没有必要使用 relu
     elif loss_type == 'hamming':
         return 0.25 * (labels - approximate_hamming_similarity(x, y)) ** 2
     else:

@@ -68,7 +68,7 @@ RL=${10}
 
 
 eval "$(conda shell.bash hook)"
-conda activate zyl_new
+conda activate anonymous_new
 
 
 # First

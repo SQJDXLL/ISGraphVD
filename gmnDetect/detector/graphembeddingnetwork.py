@@ -51,7 +51,7 @@ class GraphEncoder(nn.Module):
                 layer.append(nn.Linear(self._edge_hidden_sizes[i - 1], self._edge_hidden_sizes[i]))
             self.MLP2 = nn.Sequential(*layer)
         else:
-            # * zion: 默认启用一层mlp编码edge特征，但不改变特征维度大小
+            # * anonymous: 默认启用一层mlp编码edge特征，但不改变特征维度大小
             # * 增加了编码过程
             # ! 没有懂这一步的作用，为什么输入是节点的特征大小
             # layer.append(nn.Linear(self._node_feature_dim, self._edge_feature_dim))
@@ -86,7 +86,7 @@ class GraphEncoder(nn.Module):
         else:
             # * origin
             # edge_outputs = self.MLP2(node_features)
-            # * zion: 原来的是FW
+            # * anonymous: 原来的是FW
             # print(edge_features.shape, self.MLP2[0].weight.shape)
             edge_outputs = self.MLP2(edge_features)
           
@@ -577,7 +577,7 @@ class GraphEmbeddingNet(nn.Module):
                      n_graphs,
                      edge_features):
         """Apply one layer on the given inputs."""
-        # * zion: edge check
+        # * anonymous: edge check
         del graph_idx, n_graphs
         return layer(node_states, from_idx, to_idx, edge_features=edge_features)
 
@@ -590,7 +590,7 @@ class GraphEmbeddingNet(nn.Module):
                     layer = self._build_layer(i)
 
                 else:
-                    # * zion: 一个layer算了5次
+                    # * anonymous: 一个layer算了5次
                     layer = self._prop_layers[0]
                 self._prop_layers.append(layer)
                 # print('layer_{} produced'.format(i))
@@ -617,7 +617,7 @@ class GraphEmbeddingNet(nn.Module):
             graph representations.
         """
 
-        # * zion: edge check
+        # * anonymous: edge check
         node_features, edge_features = self._encoder(node_features, edge_features)
         node_states = node_features
 
@@ -628,7 +628,7 @@ class GraphEmbeddingNet(nn.Module):
             # node_features could be wired in here as well, leaving it out for now as
             # it is already in the inputs
             # print('prop_layer_{}...'.format(layer_idx))
-            # * zion: edge check
+            # * anonymous: edge check
             node_states = self._apply_layer(
                 layer,
                 node_states,

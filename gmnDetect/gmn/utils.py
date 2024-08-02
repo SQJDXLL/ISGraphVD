@@ -204,7 +204,7 @@ def build_datasets_DiffGraph(config):
                 max_num_node_of_one_graph=config["data"]["dataset_params"]["max_num_node_of_one_graph"],
             )
         else:
-            training_set = zylDataset(
+            training_set = anonymousDataset(
                 dataset_dir=config["data"]["dataset_params"]["train_dataset_dir"],
                 num_epoch=config["training"]["num_epoch"],
                 batch_size=config["training"]["batch_size"],
@@ -213,7 +213,7 @@ def build_datasets_DiffGraph(config):
                 num_triplets=None,
                 name="train",
             )
-            validation_set = zylDataset(
+            validation_set = anonymousDataset(
                 dataset_dir=config["data"]["dataset_params"]["vali_dataset_dir"],
                 num_epoch=config["training"]["num_epoch"],
                 batch_size=config["training"]["batch_size"],
@@ -224,7 +224,7 @@ def build_datasets_DiffGraph(config):
             )
         return training_set, validation_set
     elif config["data"]["problem"] == "malicious_detection_test":
-        validation_set = zylDataset(
+        validation_set = anonymousDataset(
             config["data"]["dataset_params"]["eval_dataset_dir"],
             num_epoch=1,
             batch_size=32,
@@ -235,7 +235,7 @@ def build_datasets_DiffGraph(config):
         )
         return validation_set
     elif config["data"]["problem"] == "malicious_detection_compare":
-        compare_set = zylDataset(
+        compare_set = anonymousDataset(
             config["data"]["dataset_params"]["eval_dataset_dir"],
             num_epoch=1,
             num_pairs=config["training"]["num_validation_pairs"],

@@ -124,7 +124,7 @@ def get_yzd_config():
 
 
 
-def get_zyl_config():
+def get_anonymous_config():
     node_state_dim = 56  # not set yet, but it gotta be the dim of original node feature (from yzd)
     graph_rep_dim = 128
     graph_embedding_net_config = dict(
@@ -230,7 +230,7 @@ def get_zyl_config():
     )
 
 
-def get_zyl_disjoint_config(edge_state_dim: int = 3):
+def get_anonymous_disjoint_config(edge_state_dim: int = 3):
     node_state_dim = 56  # not set yet, but it gotta be the dim of original node feature (from yzd)
     # The dimension of graph representation is 128.
     graph_rep_dim = 128

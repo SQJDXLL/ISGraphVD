@@ -14,9 +14,9 @@ from tqdm.contrib.concurrent import process_map
 
 from utils import remove_comments
 
-# --dot_path /data_hdd/lx20/zyl_workspace/diff-gmn/newDiff/graph/dnsmasq/CVE-2015-8899
-# --statements_path /data_hdd/lx20/zyl_workspace/diff-gmn/diffBypseudo/result/dnsmasq/CVE-2015-8899 
-# --output_dir /data_hdd/lx20/zyl_workspace/diff-gmn/diffBypseudo/result_dot/dnsmasq/CVE-2015-8899
+# --dot_path /data_hdd/lx20/anonymous_workspace/diff-gmn/newDiff/graph/dnsmasq/CVE-2015-8899
+# --statements_path /data_hdd/lx20/anonymous_workspace/diff-gmn/diffBypseudo/result/dnsmasq/CVE-2015-8899 
+# --output_dir /data_hdd/lx20/anonymous_workspace/diff-gmn/diffBypseudo/result_dot/dnsmasq/CVE-2015-8899
 parser = ArgumentParser("according statesment diff dot graph")
 parser.add_argument("--project", type=str, default="curl")
 parser.add_argument("--cve_id", type=str, default="CVE-2021-22901")

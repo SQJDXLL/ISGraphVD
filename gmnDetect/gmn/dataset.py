@@ -338,7 +338,7 @@ class yzdDataset(GraphSimilarityDataset):
 
 
 #for diffGraph
-class zylDataset(GraphSimilarityDataset):
+class anonymousDataset(GraphSimilarityDataset):
     def __init__(self, dataset_dir, num_epoch, batch_size,  max_nodes_limit, num_pairs=None, num_triplets=None, compare_path=None, name='default'):
         self.name = name
         self.dataset_dir = dataset_dir

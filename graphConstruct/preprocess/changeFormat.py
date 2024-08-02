@@ -160,7 +160,7 @@ def divide_by_datatype_detect(dataset):
             print(f"{source_file} does not exist.")
 
 # dataset = "../../dataset_Bifrost/generated_graphs1/"
-# # /home/dslab/zyl/new_SCVulPecker/dataset_Bifrost/generated_graphs1/
+# # /home/anonymous/anonymous/new_SCVulPecker/dataset_Bifrost/generated_graphs1/
 
 # dataset = "../../generated_graphs_CVE-2015-6031"
 # change_deform_for_matrix(dataset)

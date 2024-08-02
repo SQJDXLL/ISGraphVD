@@ -19,6 +19,6 @@ def convert_npy_to_npz(folder_path):
                 print(f"Deleted {npy_path}")
 
 if __name__ == "__main__":
-    folder_path = "/home/dslab/zyl/SSGraph/data/dnsmasq/CVE-2015-8899/matrix_single_divide"
+    folder_path = "/home/anonymous/anonymous/SSGraph/data/dnsmasq/CVE-2015-8899/matrix_single_divide"
     convert_npy_to_npz(folder_path)
     print("Conversion completed.")
