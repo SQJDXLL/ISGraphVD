@@ -1,0 +1,10 @@
+*.log
+*.zip
+.DS_Store*
+__pycache*
+/PG*
+*.bin
+.metals
+.vscode
+.scala-build
+.bsp
